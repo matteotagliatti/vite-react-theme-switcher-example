@@ -1,8 +1,13 @@
+import { ThemeProvider } from "./components/theme-provider";
+import { ThemeToggle } from "./components/theme-toggle";
+
 function App() {
   return (
-    <main>
-      <p className="font-bold">font</p>
-    </main>
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+      <main className="flex items-center justify-center min-h-screen">
+        <ThemeToggle />
+      </main>
+    </ThemeProvider>
   );
 }
 
